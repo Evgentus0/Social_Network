@@ -1,22 +1,9 @@
-*{
+    *{
     padding: 0;
-}
-img{
-    width: 160px;
-    height: 160px;
-    border: solid dodgerblue;
-    border-radius: 2%;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px; 
-    -khtml-border-radius: 10px; 
-    border-width: 3px;
-    
+    margin: 0;
 }
 
-.title{
-    float: left;
-    margin: 1%;
-}
+
 #username{
     font-size: 1.3em;
 }
@@ -27,11 +14,7 @@ li{
     margin-top: 1em;
     font-size: 1.1em;
 }
-.publications{
-    margin-left: 4%;
-}
-
-#logout{
+/* #logout{
     float: right;
     margin-right: 1%;
     margin-top: 1%;
@@ -128,5 +111,7 @@ li{
 #deleteUsers button span{
     font-family: Futura,Trebuchet MS,Arial,sans-serif; 
     font-size: 1.2em;
-}
+} */
+
+/* new stylies */
 

@@ -21,7 +21,7 @@ input{
     color:  rgb(43, 43, 56); 
     font-size: 1em; 
     font-family: Tahoma;
-    width: 30%;
+    width: 300px;
 }
 
 input.ng-touched.ng-invalid {

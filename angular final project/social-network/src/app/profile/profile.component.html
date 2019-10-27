@@ -1,73 +1,78 @@
-<div>
-    <div class="title" *ngIf="user">
-        <img *ngIf="hasPicture; else elseBlock" [src]="user.picturePath" alt="">
-        <ng-template #elseBlock>
-           I haven't picture)
-        </ng-template>
+<div class="row" style="padding: 1%;">
+    <div class="col-md-4 title row" *ngIf="user">
+        <div class="profile-img col-md-6">
+            <img [src]="user.picturePath" class="img-fluid img-rounded" style="max-height: 500px;">
+        </div>
+        <div class="col-md-6">
+            <ul>
+                <li>
+                    <div id="username">
+                        <span >{{user.name}} {{user.surname}}
+                        </span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span > Info: {{user.personalInfo}}</span>
+                        
+                    </div>
+                </li>
+                <li>
+                    <div >
+                        <span >Relationship: {{user.relationship}}</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span >Country: {{user.country}}</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span >City: </span>
+                        <span id="city">{{user.city}}</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span >Gender: </span>
+                        <span *ngIf="user.gender; else elseBlock">Male </span>
+                        <ng-template #elseBlock>
+                            Female
+                         </ng-template>
+                    </div>
+                </li>
+                <li>
+                    <div id="addPublication">
+                        <button (click)="addPublication()" class="btn btn-primary">
+                            <span>Add publication</span>
+                        </button>
+                    </div>
+                </li>
+                <li *ngIf="isModerator()">
+                    <div id="deleteUsers">
+                        <button (click)="deleteUsers()" class="btn btn-danger">
+                            <span>Delete users</span>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-lg-10">
+            <input type="button" value="Click to Display Map"  onclick="DisplayGoogleMap()" class="btn btn-info" style="margin: 1%;"/>
+            <div id="myDiv" style="width:100%;height:400px;"></div>
+        </div>
     </div>
-    <div class="title">
-        <ul>
-            <li>
-                
-                <div id="username">
-                    <span >{{user.name}} {{user.surname}}
-                    </span>
-                    
-                </div>
-            </li>
-            <li>
-                <div>
-                    <span > Info: {{user.personalInfo}}</span>
-                    
-                </div>
-            </li>
-            <li>
-                <div >
-                    <span >Relationship: {{user.relationship}}</span>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <span >Country: {{user.country}}</span>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <span >City: {{user.city}}</span>
-                </div>
-            </li>
-            <li>
-                <div>
-                    <span >Gender: </span>
-                    <span *ngIf="user.gender; else elseBlock">Male </span>
-                    <ng-template #elseBlock>
-                        Female
-                     </ng-template>
-                </div>
-            </li>
-            <li>
-                <div id="addPublication">
-                    <button (click)="addPublication()">
-                        <span>Add publication</span>
-                    </button>
-                </div>
-            </li>
-            <li *ngIf="isModerator()">
-                <div id="deleteUsers">
-                    <button (click)="deleteUsers()">
-                        <span>Delete users</span>
-                    </button>
-                </div>
-            </li>
-        </ul>
+
+    <div class="col-md-4">
+        <div *ngIf="user">
+            <div><app-publication [userId]="user.id"></app-publication></div>
+        </div>
     </div>
-    <div *ngIf="user" class="publications title">
-        <div><app-publication [userId]="user.id"></app-publication></div>
+    <div class="col-md-4">
+        <div id="logout">
+            <button (click)="logout()" class="btn btn-danger" style="float:right;">
+                <span>Logout</span>
+            </button>
     </div>
-    <div id="logout">
-        <button (click)="logout()">
-            <span>Logout</span>
-        </button>
-    </div>
-    
 </div>

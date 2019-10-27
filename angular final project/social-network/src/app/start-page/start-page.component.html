@@ -1,4 +1,41 @@
-<h1>Hello there!</h1>
-<h2>It is a simple social network which called Cybernetics ;)</h2>
-<p><span>Already have account - </span><a routerLink="sign-in">Click here</a></p>
-<p><span>Create new account - </span><a routerLink="register">Click here</a></p>
+<div class="wrapper">
+    <div class="title">
+        <h1 style="font-size:5em;">
+                Cybernetics
+        </h1>
+        <h2>
+            It is a simple social network created by a student of Taras Shevchenko Nation University faculty of Cybernetics
+        </h2>
+    </div>
+    <br>
+    <div class="container">
+        <div style="text-align: center;">
+            <h3 >
+                It is a list of users which already has account in this network
+            </h3>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-md-3" *ngFor="let u of users" >
+                <div class="users" (click)="goToUser(u.id)">
+                    <span id="header">
+                        {{u.name}} {{u.surname}}
+                    </span>
+                </div>
+            </div>
+        </div>
+        <br>
+
+        <div class="join">
+            <h3>
+                Join us!
+            </h3>
+            <p>
+                <a routerLink="sign-in">Has already account? Tap here</a>
+            </p>
+            <p>
+                <a routerLink="register">Create new account!</a>
+            </p>
+        </div>
+    </div>
+</div>

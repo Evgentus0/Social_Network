@@ -2,7 +2,7 @@
     <div class="title" *ngIf="user">
         <img *ngIf="hasPicture; else elseBlock" [src]="user.picturePath" alt="">
         <ng-template #elseBlock>
-           I haven't picture)
+           I don't have picture)
         </ng-template>
     </div>
     <div class="title">

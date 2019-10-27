@@ -82,6 +82,7 @@ namespace SocialNetwork_PL.Controllers
 
         [HttpGet]
         [Route("all")]
+        [AllowAnonymous]
         public IHttpActionResult GetAll()
         {
             var users = _userService.GetAll();

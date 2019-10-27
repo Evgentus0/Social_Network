@@ -7,7 +7,7 @@
 .message{
     margin:1%;
     width: 50%;
-    height: 45px;
+    height: 60px;
     font-size: 1.1em;
     border:solid;
     border-color: azure;
@@ -19,16 +19,6 @@
 }
 
 .message:hover{
-    margin:1%;
-    width: 50%;
-    height: 45px;
-    font-size: 1.1em;
-    border:solid;
-    border-color: azure;
-    border-radius: 3px; 
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px; 
-    -khtml-border-radius: 3px; 
     background-color: rgba(191, 245, 91, 0.8)
 }
 
@@ -45,7 +35,7 @@ span{
 }
 
 button{
-    margin-top: 1%;
+    margin:1%;
     width: 100px;
     height: 30px;
     border-radius: 10%; 
@@ -55,6 +45,7 @@ button{
     border:none;
     font-family: Futura,Trebuchet MS,Arial,sans-serif; 
     font-size: 1em;
+    float: right;
 }
 
 #follow{

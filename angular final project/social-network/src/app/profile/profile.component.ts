@@ -71,4 +71,5 @@ export class ProfileComponent implements OnInit {
  deleteUsers(){
    this.route.navigate(["all-users-delete"]);
  }
+ 
 }

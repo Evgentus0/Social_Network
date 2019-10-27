@@ -1,6 +1,29 @@
-*{
-    margin-left: 1%;
+.title{
+    text-align: center;
 }
-p span{
+
+.users{
+    padding: 2%;
+    margin: 2%;
+    text-align: center;
+    font-size: 1.5em;
+    background-color: rgba(19, 208, 255, 0.2);
+    border-radius: 2%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px; 
+    -khtml-border-radius: 10px; 
+    border-width: 3px;
+    transition: 0.3s;
+}
+
+.users:hover{
+    transition: 0.3s;
+    background-color: rgba(19, 208, 255, 0.8);
+    cursor: pointer;
+}
+
+.join{
+
+    text-align: center;
     font-size: 1.3em;
 }
