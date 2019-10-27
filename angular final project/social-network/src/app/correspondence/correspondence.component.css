@@ -1,0 +1,115 @@
+*{
+    margin:0;
+    padding:0;
+}
+.placeMessage{
+    border-right: dotted;
+    border-left: dotted;
+    border-right-color: honeydew;
+    border-left-color: honeydew;
+    border-bottom: dotted;
+    border-bottom-color:honeydew;
+    border-radius: 4%;
+    border-width: 4px;
+    color: rgb(43, 43, 56); 
+
+}
+
+.place{
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2%;
+}
+
+.date{
+    display: inline-block;
+    margin: 2%;
+    
+}
+
+.content{
+    width: 50%;
+    word-wrap:break-word;
+    
+    background-color: rgba(67, 79, 83, 0.3);
+    padding: 1%;
+    border-radius: 5%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px; 
+    -khtml-border-radius: 10px; 
+    display: inline-block;
+    margin: 2%;
+}
+
+.contentAuth{
+    width: 60%;
+    word-wrap:break-word;
+    background-color: rgb(33, 199, 250, 0.3);
+    padding: 1%;
+    border-radius: 5%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px; 
+    -khtml-border-radius: 10px; 
+    display: inline-block;
+    margin: 2%;
+}
+
+ul{
+    list-style-type: none;
+}
+
+li{
+    width:100%;
+}
+
+h1{
+    margin-left: 10%;
+    font-size: 2.5em;
+}
+
+.send{
+    margin:2%;
+}
+
+.send input{
+    border: 1px solid #cccccc; 
+    border-radius: 3px; 
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px; 
+    -khtml-border-radius: 3px; 
+    background: #ffffff !important; 
+    outline: none; 
+    color:  rgb(43, 43, 56); 
+    font-size: 1em; 
+    font-family: Tahoma;
+    height: 24px; 
+    width: 60%; 
+}
+
+.send button{
+    width: 100px;
+    height: 40px;
+    border-radius: 1%; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px; 
+    -khtml-border-radius: 10px; 
+    background-color: dodgerblue;
+    border:none;
+    margin-left: 7%;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    font-size: 1.2em;
+}
+.send button:hover{
+    width: 100px;
+    height: 40px;
+    border-radius: 10%; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px; 
+    -khtml-border-radius: 10px; 
+    background-color: blue;
+    border:none;
+    margin-left: 7%;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    font-size: 1.2em;
+}

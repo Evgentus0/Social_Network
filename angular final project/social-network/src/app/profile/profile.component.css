@@ -1,0 +1,132 @@
+*{
+    padding: 0;
+}
+img{
+    width: 160px;
+    height: 160px;
+    border: solid dodgerblue;
+    border-radius: 2%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px; 
+    -khtml-border-radius: 10px; 
+    border-width: 3px;
+    
+}
+
+.title{
+    float: left;
+    margin: 1%;
+}
+#username{
+    font-size: 1.3em;
+}
+ul{
+    list-style-type: none;
+}
+li{
+    margin-top: 1em;
+    font-size: 1.1em;
+}
+.publications{
+    margin-left: 4%;
+}
+
+#logout{
+    float: right;
+    margin-right: 1%;
+    margin-top: 1%;
+    
+}
+#logout button{
+    width: 100px;
+    height: 40px;
+    border-radius: 10%; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px; 
+    -khtml-border-radius: 10px; 
+    background-color: rgb(243, 111, 111);
+    border:none;
+}
+
+#logout button:hover{
+    width: 100px;
+    height: 40px;
+    border-radius: 10%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px; 
+    -khtml-border-radius: 10px;  
+    background-color: red;
+    border:none;
+}
+#logout button span{
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    font-size: 1.2em;
+}
+
+
+#addPublication{
+    margin-right: 1%;
+    margin-top: 5%;
+}
+#addPublication button{
+    width: 150px;
+    height: 40px;
+    border-radius: 10%; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px; 
+    -khtml-border-radius: 10px; 
+    background-color: rgba(57, 177, 247, 0.514);
+    border:none;
+}
+
+
+
+#addPublication button:hover{
+    width: 150px;
+    height: 40px;
+    border-radius: 10%; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px; 
+    -khtml-border-radius: 10px; 
+    background-color: rgb(46, 176, 252);
+    border:none;
+}
+
+#addPublication button span{
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    font-size: 1.2em;
+}
+
+#deleteUsers{
+    margin-right: 1%;
+    margin-top: 5%;
+}
+#deleteUsers button{
+    width: 150px;
+    height: 40px;
+    border-radius: 10%; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px; 
+    -khtml-border-radius: 10px; 
+    background-color: rgba(250, 98, 52, 0.514);
+    border:none;
+}
+
+
+
+#deleteUsers button:hover{
+    width: 150px;
+    height: 40px;
+    border-radius: 10%; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px; 
+    -khtml-border-radius: 10px; 
+    background-color: rgb(253, 85, 55);
+    border:none;
+}
+
+#deleteUsers button span{
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    font-size: 1.2em;
+}
+

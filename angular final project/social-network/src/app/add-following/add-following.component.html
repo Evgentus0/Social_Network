@@ -1,0 +1,17 @@
+<div>
+    <div class="message" *ngFor="let u of users" >
+        <span id="header" (click)="goToUser(u.id)">
+            {{u.name}} {{u.surname}}
+        </span>
+        <span id="isread" *ngIf="!isUser(u.id)">
+            <button *ngIf="!isFollowing(u); else elseBlock" id="follow" (click)="follow(u.id)">
+                Follow
+            </button>
+            <ng-template #elseBlock>
+                <button id="unfollow" (click)="unfollow(u.id)">
+                    Unfollow
+                </button>
+             </ng-template>
+        </span>
+    </div>
+</div>

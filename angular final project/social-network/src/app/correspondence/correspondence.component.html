@@ -1,0 +1,30 @@
+<div>
+    <div class="place">
+        <div class="placeMessage">
+            <div>
+                <h1>{{header}}</h1>
+            </div>
+            <div class="send">
+                    <input type="text"  [(ngModel)]="content"  placeholder="write your message" (keyup.enter)="sendMessage(content)" [value]="inputValue">  
+                    <button (click)="sendMessage(content)">
+                        Send
+                    </button>
+                </div>
+            <ul>
+                <li *ngFor="let m of messages">
+                    <div class="content"
+                    [ngClass]="{content:!isAuthor(m.senderId), contentAuth:isAuthor(m.senderId)}">
+                        <span>
+                            {{m.content}}
+                        </span>
+                    </div>
+                    <div  class="date">
+                        <span>
+                            {{m.date}}
+                        </span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

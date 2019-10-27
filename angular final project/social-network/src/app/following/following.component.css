@@ -1,0 +1,66 @@
+
+#header{
+    float:left;
+    font-size: 1.1em;
+}
+
+.message{
+    margin:1%;
+    width: 50%;
+    height: 45px;
+    font-size: 1.1em;
+    border:solid;
+    border-color: azure;
+    border-radius: 3px; 
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px; 
+    -khtml-border-radius: 3px; 
+    background-color: rgba(191, 245, 91, 0.3)
+}
+
+.message:hover{
+    margin:1%;
+    width: 50%;
+    height: 45px;
+    font-size: 1.1em;
+    border:solid;
+    border-color: azure;
+    border-radius: 3px; 
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px; 
+    -khtml-border-radius: 3px; 
+    background-color: rgba(191, 245, 91, 0.8)
+}
+
+#date{
+    float: right;
+}
+
+#isread{
+    margin-left: 60%;
+    margin-top: 15%
+}
+span{
+    margin:1%;
+}
+
+button{
+    margin-top: 1%;
+    width: 100px;
+    height: 30px;
+    border-radius: 10%; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px; 
+    -khtml-border-radius: 10px; 
+    border:none;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    font-size: 1em;
+}
+
+
+#unfollow{
+    background-color: rgba(117, 117, 94, 0.596)
+}
+#unfollow:hover{
+    background-color: rgb(192, 192, 177)
+}

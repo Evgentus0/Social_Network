@@ -1,0 +1,45 @@
+<div>
+    <div class="title" *ngIf="user">
+        <img *ngIf="hasPicture; else elseBlock" [src]="user.picturePath" alt="">
+        <ng-template #elseBlock>
+           I haven't picture)
+        </ng-template>
+    </div>
+    <div class="title">
+        <ul>
+            <li>
+                
+                <div id="username">
+                    <span >{{user.name}} {{user.surname}}
+                    </span>
+                    
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span > Info: {{user.personalInfo}}</span>
+                    
+                </div>
+            </li>
+            <li>
+                <div >
+                    <span >Relationship: {{user.relationship}}</span>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span >Country: {{user.country}}</span>
+                </div>
+            </li>
+            <li>
+                <div>
+                    <span >City: {{user.city}}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="user" class="publications title">
+        <div><app-publication [userId]="user.id"></app-publication></div>
+    </div>
+    
+</div>

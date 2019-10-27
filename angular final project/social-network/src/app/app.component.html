@@ -1,0 +1,21 @@
+<nav>
+  <div id="title">
+      <span><a routerLink="start-page">Cybernetics</a></span>
+  </div>
+  <ul>
+      <li><a routerLink="main-publications">Home</a></li>
+      <li><a [routerLink]="['followers', userName]">Followers</a></li>
+      <li><a [routerLink]="['following', userName]">Following</a></li>
+      <li><a routerLink="messanger">Messenger</a></li>
+      <li><a routerLink="add-following">Add following</a></li>
+  </ul>
+  <div id="profile">
+      <span>
+          <a routerLink="profile" >{{email}}</a>
+      </span>
+      <img src="https://localhost:44348/Photo/myFoto.jpg" alt="">
+  </div>
+</nav>
+
+
+<router-outlet ></router-outlet>

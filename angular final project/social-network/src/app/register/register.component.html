@@ -1,0 +1,37 @@
+<div>
+    <ul>
+        <li><label >Name: <input type="text" name="name" [(ngModel)]="register.name" required></label></li>
+        <li><label >Surname: <input type="text" id="input-surname" required  [(ngModel)]="register.surname"></label></li>
+        <li><span>Gender: </span>
+            <label >Male <input type="radio" value="true" id="input-gender"  name="gender" [(ngModel)]="register.gender"></label>
+            <label>Female <input type="radio" value="false" name="gender" [(ngModel)]="register.gender" required></label></li>
+        <li><label >Date of birth: <input type="date" id="input-birthday" required [(ngModel)]="register.dateBirth" required></label></li>
+        <li><label >Personal info: <input type="text" id="input-info" [(ngModel)]="register.personalInfo"></label></li>
+        <li><label >Relationship: 
+            <select name="Relationship" id="input-relationship" [(ngModel)]="register.relationshipId" >    
+                <option *ngFor="let c of relationship" [value]="c.id">{{c.name}}</option>
+            </select>
+        </label></li>
+        <li><label >Country: 
+            <select name="Country" id="input-country" [(ngModel)]="register.countryId">
+                <option *ngFor="let c of countries" [value]="c.id">{{c.name}}</option>
+            </select>
+        </label></li>
+        <li><label >City: 
+            <select name="City" id="input-city" [(ngModel)]="register.cityId">
+                <option *ngFor="let c of cities" [value]="c.id">{{c.name}}</option>
+            </select>
+        </label></li>
+    </ul>   
+    <ul>
+        <li><label >Email: <input type="email" id="input-login" name="email" [(ngModel)]="register.email" required email ></label></li>
+        <li><label >Phone Number: <input type="number" name="phone" [(ngModel)]="register.phoneNumber" required></label></li>
+        <li><label >Password: <input type="password" required [(ngModel)]="register.password" minlength="6"></label></li>
+        <li><label >Confirm Password: <input type="password" [(ngModel)]="register.confirmPassword" required minlength="6"></label></li>
+    </ul>
+    <div>
+        <button id="register" (click)="userRegister()">
+            Register
+        </button>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+<div>
+    <div class="message" *ngFor="let u of users" >
+        <span id="header" (click)="goToUser(u.id)">
+            {{u.name}} {{u.surname}}
+        </span>
+        <span id="isread">
+                <button id="unfollow" (click)="unfollow(u.id)">
+                    Unfollow
+                </button>
+        </span>
+    </div>
+</div>

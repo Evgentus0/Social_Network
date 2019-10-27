@@ -1,0 +1,31 @@
+<div >
+    <div id="publication" *ngFor="let p of publications">
+        <div>
+            <span id="header">{{p.header}}</span>
+            <span id="author">{{p.authorName}}</span>
+        </div>
+        <div>
+            <span id="content">{{p.content}}</span>
+        </div>
+        <div>
+            <span>
+                {{p.date}}
+            </span>
+            <span class="quantity">
+                Like: {{p.userWhoLike.length}}
+            </span>
+        </div>
+        <div>
+            <button [ngClass]="{like:isLiked(p), dislike:!isLiked(p)}" (click)="like(p.id)">
+                Like
+            </button>
+            <button id="edit" (click)="edit(p.id, p.authorId)">
+                Edit
+            </button>
+            <button id="delete" (click)="delete(p.id, p.authorId)">
+                Delete
+            </button>
+        </div>
+        <hr>
+    </div>
+</div>

@@ -1,0 +1,17 @@
+<div>
+        <div>
+            <label >Header <input type="text"  [(ngModel)]="messageHeader.header" ></label>
+            <select name="Users" id="user" [(ngModel)]="user">
+                <option *ngFor="let u of users" [value]="u.id">
+                        {{u.name}}
+                </option>
+            </select>
+            <button class="add" (click)="addUser()">
+                    Add user
+                </button>
+        </div>
+        <div>
+                <button class="add" (click)="add()">Add</button>
+                <button id="cancel" (click)="cancel()">Cancel</button>
+        </div>
+    </div>

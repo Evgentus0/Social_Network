@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#publication{
+    margin:15%;
+    position: relative;
+    width: 550px;
+    word-wrap:break-word;
+}
+
+#publication div{
+    margin:3%;
+}
+
+#author{
+    float: right;
+    color: rgb(4, 19, 107)
+}
+
+#header{
+    font-size: 1.5em;
+    
+}
+
+#content{
+    font-size: 1.2em;
+}
+hr{
+    width: 100%;
+}
+
+button{
+    margin: 1%;
+    width: 70px;
+    height: 30px;
+    border-radius: 10%; 
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px; 
+    -khtml-border-radius: 10px; 
+    border:none;
+    font-family: Futura,Trebuchet MS,Arial,sans-serif; 
+    font-size: 1em;
+}
+
+.like{
+background-color: rgba(248, 169, 182, 0.678)
+}
+.like:hover{
+    background-color: rgba(255, 151, 168, 0.925)
+}
+
+.dislike{
+background-color: rgba(128, 128, 128, 0.527);
+}
+
+.dislike:hover{
+    background-color: rgb(168, 167, 167);
+}
+
+#edit{
+    background-color: rgba(73, 148, 223, 0.486)
+}
+#edit:hover{
+    background-color: rgba(58, 156, 255, 0.89)
+}
+#delete{
+    float: right;
+    background-color: rgba(250, 28, 28, 0.884);
+}
+#delete:hover{
+    float: right;
+    background-color: rgb(83, 1, 1);
+    color: rgb(160, 149, 149)
+}
+
+.quantity{
+    float: right;
+}

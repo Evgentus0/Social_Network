@@ -1,0 +1,13 @@
+<div>
+    <p><label >Login <input type="text" id="input-login" name="email" [(ngModel)]="login.email" #email="ngModel" required email></label></p>
+    <p>
+        <label >Password <input type="password" name="password" [(ngModel)]="login.password" #password="ngModel" required></label>
+        <button (click)="email.valid && password.valid &&  loginUser()" 
+                [ngClass]="{undisable:email.valid && password.valid, disable:!email.valid||!password.valid}"            
+        >Login</button></p>
+</div>
+<div>
+    <span>Do you haven't account? </span>
+    <a routerLink="register">Click here to registration</a>
+</div>
+

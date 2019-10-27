@@ -1,0 +1,49 @@
+input{
+    height: 30px;
+    border: 1px solid #cccccc; 
+    border-radius: 3px; 
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px; 
+    -khtml-border-radius: 3px; 
+    background: #ffffff !important; 
+    outline: none; 
+    color:  rgb(43, 43, 56); 
+    font-size: 1em; 
+    font-family: Tahoma;
+    width: 30%;
+}
+div{
+    font-size: 1.2em;
+}
+*{
+    margin-left: 1%;
+    padding: 0;
+}
+
+p button{
+    position: relative;
+    font-size: 1em;
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 5%;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px; 
+    -khtml-border-radius: 10px; 
+}
+
+#add{
+    background-color: rgba(38, 152, 245, 0.664);
+}
+#add:hover{
+    background-color: rgba(23, 150, 253, 0.945);
+}
+
+#cancel{
+    background-color: rgba(248, 116, 82, 0.5);
+}
+#cancel:hover{
+    background-color: rgba(250, 95, 56, 0.863);
+}

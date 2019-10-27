@@ -1,0 +1,12 @@
+<div>
+        <div class="message" *ngFor="let u of users" >
+            <span id="header" >
+                {{u.name}} {{u.surname}}
+            </span>
+            <span id="isread">
+                <button (click)="delete(u.id)">
+                    delete
+                </button>
+            </span>
+        </div>
+    </div>

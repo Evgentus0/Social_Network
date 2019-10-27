@@ -1,0 +1,28 @@
+<div>
+    <div id="add"> 
+        <button (click)="addMessanger()">
+            Add messanger
+        </button>
+    </div>
+    <div *ngFor="let m of messageHeaders" id="head">
+            <div class="message" (click)="toCorrespondence(m.id)">
+            <span id="header">
+                    {{m.header}}
+                </span>
+                <span class="date">
+                    {{m.createDate}}
+                </span>
+                <span class="date">
+                        {{m.type}}
+                    </span>
+                </div>
+                <div class="buttons">
+                    <button (click)="deleteForOne(m.id)">
+                        Delete
+                    </button>
+                    <button (click)="delete(m.id)">
+                            Delete for all
+                        </button>
+                </div>
+            </div>
+</div>
