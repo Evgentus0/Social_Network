@@ -16,6 +16,7 @@ import { AddMessangerComponent } from './add-messanger/add-messanger.component';
 import { AllUsersDeleteComponent } from './all-users-delete/all-users-delete.component';
 import { ErrorViewComponent } from './error-view/error-view.component';
 import { AddFollowingComponent } from './add-following/add-following.component';
+import { ChatComponent } from './chat/chat.component';
 
 
 const routes: Routes = [
@@ -38,7 +39,8 @@ const routes: Routes = [
   {path:"add-messanger", component:AddMessangerComponent},
   {path:"all-users-delete", component:AllUsersDeleteComponent},
   {path:"error", component:ErrorViewComponent},
-  {path:"add-following", component:AddFollowingComponent}
+  {path:"add-following", component:AddFollowingComponent},
+  {path:"chat", component:ChatComponent}
 ];
 
 @NgModule({

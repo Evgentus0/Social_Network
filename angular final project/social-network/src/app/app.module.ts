@@ -30,6 +30,7 @@ import { AllUsersDeleteComponent } from './all-users-delete/all-users-delete.com
 import { ErrorViewComponent } from './error-view/error-view.component';
 import { AddFollowingComponent } from './add-following/add-following.component';
 import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
+import { ChatComponent } from './chat/chat.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
     AllUsersDeleteComponent,
     ErrorViewComponent,
     AddFollowingComponent,
-    ModalDialogComponent
+    ModalDialogComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
