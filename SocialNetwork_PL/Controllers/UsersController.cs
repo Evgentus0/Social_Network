@@ -114,6 +114,7 @@ namespace SocialNetwork_PL.Controllers
         }
         [HttpGet]
         [Route("{id}")]
+        [AllowAnonymous]
         public IHttpActionResult GetUser(string id)
         {
             var user = CustomMapperPL.FromUserDtoToUserModel(_userService.GetUserById(id), false);
@@ -134,6 +135,25 @@ namespace SocialNetwork_PL.Controllers
         {
             _userService.UnSubscribe(User.Identity.Name, id);
             return Ok();
+        }
+
+        [HttpGet]
+        [Route("GetByCity/{city}")]
+        [AllowAnonymous]
+        public IHttpActionResult GetCountOfUsersInCity(string city)
+        {
+            var users = CustomMapperPL.FromUserDtoToUserModel(_userService.GetUsersByCity(city));
+            return Ok(users);
+        }
+
+        [HttpGet]
+        [Route("search")]
+        [AllowAnonymous]
+        public IHttpActionResult GetFilteredUsers()
+        {
+            var users = _userService.GetAll();
+            var models = CustomMapperPL.FromUserDtoToUserModel(users).Select(user => new UserSearch() { id=user.Id, name=user.Name}).ToList();
+            return Ok(new SearchResult() {results=models, total=models.Count() });
         }
 
         #region helpers

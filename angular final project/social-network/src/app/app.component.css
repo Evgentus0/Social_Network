@@ -35,6 +35,15 @@ div{
   color:whitesmoke;
   text-decoration: none;
 }
+
+#search{
+  margin-top:0;
+  font-size: 1.3em;
+  position: absolute;
+  margin-left: 55%;
+  bottom: 10px;
+}
+
 ul {
     list-style-type: none;
     margin-left: 20%;

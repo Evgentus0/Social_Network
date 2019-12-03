@@ -16,5 +16,28 @@
   </div>
 </nav>
 
+<form class="example-form" [formGroup]='usersForm' style="font-size: 1.2em; padding:2%;">
+    <mat-form-field class="example-full-width">
+        <input matInput  [matAutocomplete]="auto" formControlName="userInput">
+
+
+    <span>Tap Here ↑ Your choice is: {{usersForm.get('userInput').value | json}}</span>
+    
+    <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn">
+        <mat-option *ngIf="!isLoading"     class="is-loading"><mat-spinner diameter="50"></mat-spinner></mat-option>
+        <mat-option *ngFor="let user of filteredUsers" [value]="user">
+            <span>{{ user.name }}</span>
+            <small> | ID: {{user.id}}</small>
+        </mat-option>
+    </mat-autocomplete>
+</mat-form-field>
+</form>
+
+<select name="" id="">
+    <option *ngFor="let user of filteredUsers" value="">
+        {{user.name}}
+    </option>
+</select>
+            
 
 <router-outlet ></router-outlet>

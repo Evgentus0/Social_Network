@@ -1,4 +1,29 @@
 export class User{
+    constructor(
+        id:string,
+        name:string,
+        surname:string,
+        personalInfo:string,
+        relationship:string,
+        country:string,
+        city:string,
+        picturePath:string,
+        email:string,
+        phone:string,
+        gender:boolean,){
+            this.id=id;
+            this.name=name;
+            this.surname=surname;
+            this.personalInfo=personalInfo;
+            this.relationship=relationship;
+            this.country=country;
+            this.city=city;
+            this.picturePath=picturePath;
+            this.email=email;
+            this.phone=phone;
+            this.gender=gender;
+        }
+        
     id:string;
     name:string;
     surname:string;

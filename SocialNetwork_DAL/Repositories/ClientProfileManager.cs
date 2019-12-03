@@ -29,7 +29,9 @@ namespace SocialNetwork_DAL.Repositories
 
         public IEnumerable<ClientProfile> Find(Func<ClientProfile, bool> predicate)
         {
-            return _context.ClientProfiles.Include(x => x.Followers).Include(x => x.Following).Include(x => x.Publications).Include(x => x.MessageHeaders).Where(predicate);
+            return _context.ClientProfiles.Include(x => x.Followers).Include(x => x.Following)
+                .Include(x => x.Publications).Include(x => x.MessageHeaders)
+                .Include(x=>x.Country).Include(x=>x.City).Where(predicate);
         }
 
         public IEnumerable<ClientProfile> GetAll()

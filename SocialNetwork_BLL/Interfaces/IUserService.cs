@@ -22,6 +22,7 @@ namespace SocialNetwork_BLL.Interfaces
         ICollection<UserDTO> GetFollowersById(string id);
         ICollection<UserDTO> GetFollowingById(string id);
         ICollection<UserDTO> GetAll();
+        ICollection<UserDTO> GetUsersByCity(string city);
         IdentityResult Delete(string id);
         void Dispose();
     }

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../shared/Models/user.model';
 import { UserService } from '../shared/services/user.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-followers',

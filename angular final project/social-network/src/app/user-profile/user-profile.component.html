@@ -1,9 +1,8 @@
 <div class="row">
     <div class="col-md-4 title row" *ngIf="user">
-        <div class="col-md-6">
-            <img  [src]="user.picturePath" alt="">
+        <div class="profile-img col-md-6">
+            <img [src]="user.picturePath" class="img-fluid img-rounded" style="max-height: 500px;">
         </div>
-
         <div class="col-md-6">
             <ul>
                 <li>
@@ -34,6 +33,14 @@
                     <div>
                         <span >City: </span>
                         <span id="city">{{user.city}}</span>
+                    </div>
+                </li>
+                <li>
+                    <div>
+                        <span >Users nearby: </span>
+                        <span class="badge badge-light" style="font-size: 1.2em;" id="usersNearlyCount">{{usersNearly.length}}</span>
+                        <span> (Check map)</span>
+                        <span style="display: none;" id="contentMap">{{contentMap}}</span>
                     </div>
                 </li>
             </ul>

@@ -1,15 +1,18 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+// var prefix:string="https://socialnetworkpl.azurewebsites.net";
+var prefix:string="https://localhost:44348/";
 
 export const environment = {
   production: false,
-  currentUserUrl: "https://localhost:44348/api/users",
-  loginUser:"https://localhost:44348/token",
-  publications:"https://localhost:44348/api/publications",
-  messageHeader:"https://localhost:44348/api/messageheaders",
-  message:"https://localhost:44348/api/message",
-  additional:"https://localhost:44348/api/additional",
+  currentUserUrl: prefix+"api/users",
+  searchUser: prefix+"api/users/search",
+  loginUser:prefix+"/token",
+  publications:prefix+"api/publications",
+  messageHeader:prefix+"api/messageheaders",
+  message:prefix+"api/message",  
+  additional:prefix+"api/additional",
 };
 
 /*

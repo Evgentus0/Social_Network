@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatFormFieldModule, MatInputModule, MatAutocompleteModule, MatButtonModule, MatProgressSpinnerModule} from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { UserService } from './shared/services/user.service';
 import { AuthService } from './shared/services/auth.service';
 import { PublicationService } from './shared/services/publication.service';
@@ -31,6 +33,7 @@ import { ErrorViewComponent } from './error-view/error-view.component';
 import { AddFollowingComponent } from './add-following/add-following.component';
 import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
 import { ChatComponent } from './chat/chat.component';
+import { UserSerchService } from './shared/services/search-user.service';
 
 @NgModule({
   declarations: [
@@ -60,6 +63,13 @@ import { ChatComponent } from './chat/chat.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatFormFieldModule, 
+    MatInputModule, 
+    MatAutocompleteModule, 
+    MatButtonModule, 
+    MatProgressSpinnerModule
   ],
   providers: [
     UserService,
@@ -68,6 +78,7 @@ import { ChatComponent } from './chat/chat.component';
     MessageHeaderService,
     MessageService,
     AdditionalService,
+    UserSerchService,
     {
       provide:HTTP_INTERCEPTORS,
       useClass:TokenInterceptor,

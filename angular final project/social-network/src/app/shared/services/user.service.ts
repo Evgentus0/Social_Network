@@ -89,6 +89,11 @@ export class UserService{
         return this.http.get<User[]>(url);
     }
 
+    getUsersByCity(city:string):Observable<User[]>{
+        let url=environment.currentUserUrl+"/GetByCity/"+city;
+        return this.http.get<User[]>(url);
+    }
+
     delete(id:string){
         let url=environment.currentUserUrl+"/"+id;
         return this.http.delete(url);

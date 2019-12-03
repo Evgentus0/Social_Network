@@ -175,5 +175,11 @@ namespace SocialNetwork_BLL.Services
             var users = _dataBase.Profiles.GetAll();
             return CustomMapperBLL.FromClientProfileToUserDTO(users);
         }
+
+        public ICollection<UserDTO> GetUsersByCity(string city)
+        {
+            var users = _dataBase.Profiles.Find(x => x.City.Name == city);
+            return CustomMapperBLL.FromClientProfileToUserDTO(users);
+        }
     }
 }
